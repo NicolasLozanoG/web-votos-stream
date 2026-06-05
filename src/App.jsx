@@ -16,6 +16,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
   const [editingGame, setEditingGame] = useState(null); // null or game object to edit
+  const [splashState, setSplashState] = useState('visible'); // visible, hiding, hidden
 
   // Games state initialized from localStorage
   const [games, setGames] = useState(() => {
@@ -34,6 +35,13 @@ function App() {
     return (votes[current.id] > votes[prev.id]) ? current : prev;
   }, games[0]);
   const isTieOrZero = totalVotes === 0;
+
+  // Splash screen timers
+  useEffect(() => {
+    const timer1 = setTimeout(() => setSplashState('hiding'), 2000); // start hiding after 2s
+    const timer2 = setTimeout(() => setSplashState('hidden'), 2500); // fully hidden after 2.5s
+    return () => { clearTimeout(timer1); clearTimeout(timer2); };
+  }, []);
 
   // Save games to local storage whenever they change
   useEffect(() => {
@@ -91,6 +99,17 @@ function App() {
 
   return (
     <div className={`app-container theme-${theme}`}>
+      {/* Splash Screen */}
+      {splashState !== 'hidden' && (
+        <div className={`splash-screen ${splashState === 'hiding' ? 'hiding' : ''}`}>
+          <div className="splash-logo-container">
+            <img src="/logo.png" alt="Logo" className="splash-logo" />
+            <div className="splash-ripple"></div>
+            <div className="splash-ripple delay"></div>
+          </div>
+        </div>
+      )}
+
       {/* Top Bar Header */}
       <header className="top-bar">
         <div className="logo-container">
