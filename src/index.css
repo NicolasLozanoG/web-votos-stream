@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Bubblegum+Sans&family=Sniglet:wght@400;800&family=Nunito:wght@400;700;900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Transparent background to be used as overlay in OBS */
+  background: transparent !important;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Base Theme Variables */
+.theme-mlp {
+  --font-family: 'Nunito', sans-serif;
+  --bg-color: rgba(255, 182, 193, 0.2);
+  --bg-image: url('/pinkie_pie_bg.png');
+  --primary: #ff69b4;
+  --secondary: #ff1493;
+  --text-color: #fff;
+  --card-bg: rgba(255, 192, 203, 0.85);
+  --border-color: #ff69b4;
+  --border-radius: 20px;
+  --shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.37);
+  --bar-color: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
+}
+
+.theme-bubble {
+  --font-family: 'Fredoka One', 'Bubblegum Sans', cursive;
+  --bg-color: rgba(173, 216, 230, 0.1);
+  --bg-image: url('/bubble_bg.png');
+  --primary: #00bfff;
+  --secondary: #87cefa;
+  --text-color: #fff;
+  --card-bg: rgba(224, 255, 255, 0.65);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --border-radius: 50px;
+  --shadow: 0 8px 32px 0 rgba(135, 206, 235, 0.4);
+  --bar-color: linear-gradient(90deg, #87cefa 0%, #00bfff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}

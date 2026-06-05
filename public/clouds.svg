@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" preserveAspectRatio="none">
+  <!-- Soft subtle shadow -->
+  <path fill="#e0f2fe" d="M0 150 L0 80 Q 50 10 120 70 Q 200 -10 320 60 Q 450 -30 600 60 Q 750 -40 900 50 Q 1050 -20 1150 70 Q 1180 30 1200 80 L 1200 150 Z" opacity="0.5"/>
+  <!-- Main white clouds -->
+  <path fill="#ffffff" d="M0 150 L0 90 Q 60 30 130 80 Q 220 10 340 70 Q 480 -10 630 70 Q 780 -20 930 60 Q 1070 10 1160 80 Q 1180 50 1200 90 L 1200 150 Z" />
+</svg>
