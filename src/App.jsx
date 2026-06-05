@@ -102,11 +102,10 @@ function App() {
       {/* Splash Screen */}
       {splashState !== 'hidden' && (
         <div className={`splash-screen ${splashState === 'hiding' ? 'hiding' : ''}`}>
-          <div className="splash-logo-container">
-            <img src="/logo.png" alt="Logo" className="splash-logo" />
-            <div className="splash-ripple"></div>
-            <div className="splash-ripple delay"></div>
-          </div>
+          <div className="splash-ripple"></div>
+          <div className="splash-ripple delay"></div>
+          <div className="splash-transition-wave"></div>
+          <img src="/logo.png" alt="Logo" className="splash-logo" />
         </div>
       )}
 
